@@ -1,42 +1,40 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import AnchorLink from "react-anchor-link-smooth-scroll"
+import styled from "styled-components"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const ListLink = ({ href, children }) => (
+  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+    <AnchorLink href={href}>{children}</AnchorLink>
+  </li>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const Header = styled.header`
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin: 1.5rem;
+`
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+const StyledH3 = styled.h3`
+  display: inline;
+`
+const StyledUl = styled.ul`
+  list-style: none;
+  float: right;
+`
 
-export default Header
+export default () => (
+  <Header>
+    <AnchorLink
+      href="#intro"
+      style={{ textShadow: `none`, backgroundImage: `none` }}
+    >
+      <StyledH3>Jacob's Portfolio</StyledH3>
+    </AnchorLink>
+    <StyledUl>
+      <ListLink href="#projects">Projects</ListLink>
+      <ListLink href="#about">About</ListLink>
+      <ListLink href="#contact">Contact</ListLink>
+    </StyledUl>
+  </Header>
+)
