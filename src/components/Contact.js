@@ -12,6 +12,15 @@ const Input = styled.input`
   border-radius: 3px;
 `
 
+const TextArea = styled.textarea`
+  padding: 0.5em;
+  margin: 0.5em;
+  color: #183c28;
+  background: #eec643;
+  border: none;
+  border-radius: 3px;
+`
+
 const Column = styled.div`
   display: flex;
   flex-direction: column;
@@ -27,6 +36,7 @@ export default () => {
           netlify-honeypot="bot-field"
           data-netlify="true"
           name="Contact Form"
+          action="/thank-you"
         >
           <input type="hidden" name="form-name" value="Contact Form" />
           <Column>
@@ -39,7 +49,7 @@ export default () => {
           </Column>
           <Column>
             <label>Message</label>
-            <Input type="text" name="message" />
+            <TextArea type="text" name="message" />
           </Column>
           <S.SmallButton type="submit">Submit</S.SmallButton>
         </form>
