@@ -6,7 +6,7 @@ import * as S from "./styles"
 export default () => {
   return (
     <S.Window id="about">
-      <h1>About</h1>
+      <S.StyledH1>About</S.StyledH1>
       <S.Container>
         <h3>
           I work in web development and specialize in MERN and JAM stack

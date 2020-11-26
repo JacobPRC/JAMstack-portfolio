@@ -6,13 +6,13 @@ import * as S from "./styles"
 const Input = styled.input`
   padding: 0.5em;
   margin: 0.5em;
-  color: palevioletred;
-  background: papayawhip;
+  color: #183c28;
+  background: #eec643;
   border: none;
   border-radius: 3px;
 `
 
-const Form = styled.form`
+const Column = styled.div`
   display: flex;
   flex-direction: column;
 `
@@ -20,22 +20,29 @@ const Form = styled.form`
 export default () => {
   return (
     <S.Window id="contact">
-      <h1>Contact</h1>
+      <S.StyledH1>Contact</S.StyledH1>
       <S.Container>
-        <Form
+        <form
           method="post"
           netlify-honeypot="bot-field"
           data-netlify="true"
-          name="contact"
+          name="Contact Form"
         >
-          <label>Email</label>
-          <Input type="email" name="email" />
-          <label>Name</label>
-          <Input type="text" name="name" />
-          <label>Message</label>
-          <Input type="text" name="message" />
-          <S.SmallButton>Submit</S.SmallButton>
-        </Form>
+          <input type="hidden" name="form-name" value="Contact Form" />
+          <Column>
+            <label>Email</label>
+            <Input type="email" name="email" />
+          </Column>
+          <Column>
+            <label>Name</label>
+            <Input type="text" name="name" />
+          </Column>
+          <Column>
+            <label>Message</label>
+            <Input type="text" name="message" />
+          </Column>
+          <S.SmallButton type="submit">Submit</S.SmallButton>
+        </form>
       </S.Container>
     </S.Window>
   )

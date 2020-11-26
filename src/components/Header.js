@@ -17,6 +17,7 @@ const Header = styled.header`
 
 const StyledH3 = styled.h3`
   display: inline;
+  color: #183c28;
 `
 const StyledUl = styled.ul`
   list-style: none;

@@ -49,6 +49,20 @@ export const Container = styled.div`
   margin-top: 2rem auto;
 `
 
+export const CenteredContainer = styled.div`
+  margin: 3rem auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+`
+
+export const StyledH1 = styled.h1`
+  color: #183c28;
+`
+
 export const Window = styled.div`
   height: 90vh;
 `

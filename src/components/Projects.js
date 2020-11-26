@@ -7,7 +7,7 @@ import * as S from "./styles"
 export default () => {
   return (
     <S.Window id="projects">
-      <h1>Projects</h1>
+      <S.StyledH1>Projects</S.StyledH1>
       <Flex col={3}>
         <Project />
         <Project />
