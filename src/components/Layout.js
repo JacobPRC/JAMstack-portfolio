@@ -11,10 +11,8 @@ const Container = styled.div`
 
 export default ({ children }) => (
   <>
-    <Container>
-      <Header />
-      {children}
-    </Container>
+    <Header />
+    <Container>{children}</Container>
     <Footer />
   </>
 )

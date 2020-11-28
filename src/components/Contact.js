@@ -51,6 +51,7 @@ export default () => {
             <label>Message</label>
             <TextArea type="text" name="message" />
           </Column>
+          <br />
           <S.SmallButton type="submit">Submit</S.SmallButton>
         </form>
       </S.Container>
