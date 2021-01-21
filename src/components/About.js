@@ -9,9 +9,11 @@ export default () => {
       <S.StyledH1>About</S.StyledH1>
       <S.Container>
         <h3>
-          I work in web development and specialize in MERN and JAM stack
-          progressive web apps. I work mostly with React, GraphQL and Gatsby.js,
-          but picking up a new language or framework is no problem for me.
+          Looking for a dope web developer? Look no further! I would love to
+          help you make the perfect site for your business or be a part of your
+          web developing team. I mostly use MERN and JAMstack for web
+          development, but I love coding and can jump into any new language or
+          framework.
         </h3>
         <i>
           <h4>Interested in working with me?</h4>

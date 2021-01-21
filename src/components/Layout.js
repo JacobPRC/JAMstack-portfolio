@@ -13,6 +13,5 @@ export default ({ children }) => (
   <>
     <Header />
     <Container>{children}</Container>
-    <Footer />
   </>
 )

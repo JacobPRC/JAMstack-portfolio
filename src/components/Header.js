@@ -10,13 +10,12 @@ const Li = styled.li`
 `
 
 const Header = styled.header`
+  padding: 1rem;
+  background-color: #fff;
+  height: 4rem;
   position: sticky;
   top: 0;
   z-index: 100;
-  margin: 1.5rem;
-  background-color: #e6cfae;
-  height: 2.5rem;
-  margin: 0rem;
 `
 
 const StyledH3 = styled.h3`

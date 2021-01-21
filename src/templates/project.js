@@ -18,7 +18,8 @@ const Card = styled.div`
 
 const Flex = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 `
 
@@ -44,7 +45,7 @@ export default ({ title, description, codeLink, liveLink, id }) => (
         </i>
         <br />
         <Flex>
-          <a href={liveLink}>View Site</a>
+          {liveLink ? <a href={liveLink}>View Site</a> : null}
           <a href={codeLink}>View Code</a>
         </Flex>
       </Content>

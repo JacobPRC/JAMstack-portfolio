@@ -3,6 +3,7 @@ import { Flex } from "react-flex-ready"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Project from "../templates/project"
+import HighlightedProject from "../components/HighlightedProject"
 import * as S from "./styles"
 
 export default () => {
@@ -16,7 +17,6 @@ export default () => {
               frontmatter {
                 title
                 description
-                live_link
                 code_link
               }
             }
@@ -29,19 +29,13 @@ export default () => {
   const renderProjects = () => {
     return data.allMarkdownRemark.edges.map(project => {
       const projectData = project.node
-      const {
-        title,
-        description,
-        live_link,
-        code_link,
-      } = projectData.frontmatter
+      const { title, description, code_link } = projectData.frontmatter
       const { id } = projectData
 
       return (
         <Project
           title={title}
           description={description}
-          liveLink={live_link}
           codeLink={code_link}
           id={id}
         />
@@ -50,9 +44,11 @@ export default () => {
   }
 
   return (
-    <S.Window id="projects">
+    <div id="projects">
       <S.StyledH1>Projects</S.StyledH1>
+      <HighlightedProject />
+      <br />
       <Flex col={3}>{renderProjects()}</Flex>
-    </S.Window>
+    </div>
   )
 }
